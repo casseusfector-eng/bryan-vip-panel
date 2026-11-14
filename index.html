@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d19">
+<title>BRYAN CASSEUS VIP</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080d19;color:#edf3ff;font-family:Arial,sans-serif}
+header{text-align:center;padding:28px 15px;background:linear-gradient(120deg,#101c35,#202d48);border-bottom:2px solid #ff7900}
+h1{font-size:25px;margin:8px}
+h1 span{color:#ff7900}
+header p{color:#a9b8d0}
+main{max-width:650px;margin:auto;padding:16px}
+.card{background:#121d30;border:1px solid #263c5e;border-radius:14px;padding:18px;margin:15px 0}
+h2{font-size:17px;color:#70b5ff;margin-top:0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.item{background:#0b1425;padding:13px;border-radius:9px}
+.item small{display:block;color:#9aabc4;margin-bottom:7px}
+.item b{color:#ff9b37}
+button{border:0;border-radius:9px;padding:13px;color:white;font-weight:bold;background:#176bd1;margin:4px;cursor:pointer}
+button.orange{background:#ed7900}
+button.red{background:#bd3030}
+.actions{display:flex;flex-wrap:wrap}
+label{display:block;padding:10px;background:#0b1425;margin:8px 0;border-radius:8px}
+input{accent-color:#ff7900}
+#console{background:#050a12;padding:13px;border-radius:9px;min-height:85px;white-space:pre-wrap;color:#80e6a0;font-size:12px}
+footer{text-align:center;color:#7889a5;padding:22px;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+<div style="font-size:38px">👑</div>
+<h1>BRYAN CASSEUS <span>VIP</span></h1>
+<p>FREE FIRE • VIP DASHBOARD</p>
+</header>
+<main>
+<section class="card">
+<h2>⚙️ STATUT DU PANNEAU</h2>
+<div class="grid">
+<div class="item"><small>Version</small><b>VIP 1.0</b></div>
+<div class="item"><small>Interface</small><b>ACTIVE</b></div>
+<div class="item"><small>Mode</small><b>DÉMONSTRATION</b></div>
+<div class="item"><small>Connexion</small><b id="status">EN ATTENTE</b></div>
+</div>
+</section>
+<section class="card">
+<h2>🚀 COMMANDES DE DÉMONSTRATION</h2>
+<div class="actions">
+<button onclick="action('Panneau chargé')">Charger</button>
+<button class="orange" onclick="action('Démonstration lancée')">Démarrer</button>
+<button class="red" onclick="resetPanel()">Réinitialiser</button>
+</div>
+<p id="message">En attente de commande...</p>
+</section>
+<section class="card">
+<h2>🛡️ OPTIONS VISUELLES</h2>
+<label><input type="checkbox" checked> Mode VIP</label>
+<label><input type="checkbox" checked> Mode sécurisé</label>
+<label><input type="checkbox"> Mode silencieux</label>
+<label><input type="checkbox"> Notifications</label>
+</section>
+<section class="card">
+<h2>🎯 INFORMATIONS</h2>
+<p>Application : Free Fire</p>
+<p>Plateforme : Android</p>
+<p>Propriétaire : Bryan Casseus</p>
+</section>
+<section class="card">
+<h2>💻 CONSOLE</h2>
+<pre id="console">[BRYAN VIP] Panneau prêt.</pre>
+</section>
+</main>
+<footer>BRYAN CASSEUS VIP © 2026</footer>
+<script>
+function action(msg){
+document.getElementById('message').textContent=msg;
+document.getElementById('status').textContent='CONNECTÉ';
+document.getElementById('console').textContent+='\n[VIP] '+msg;
+}
+function resetPanel(){
+document.getElementById('message').textContent='Panneau réinitialisé.';
+document.getElementById('status').textContent='EN ATTENTE';
+document.getElementById('console').textContent='[BRYAN VIP] Réinitialisation terminée.';
+}
+</script>
+</body>
+  </html>
